@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/detail.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="detail_box">
+  <p class="restrict_p"><span>Restricted Report (Report from Starcom proprietary system & Data ource is Iresearch iuser tracker)</span></p>
+  <div class="title_box">
+    <p>Digital Publisher Screening-Mobile</p>
+    <div class="select_box">
+      <label for="Month" >
+        Month
+        <select class="" name="Month" id="Month" v-on:change="onChange">
+            <option v-for="Month in Month_list" v-bind="Month">{{Month}}</option>
+        </select>
+      </label>
+      <label for="Category" style="margin-left:40px;">
+        Category
+        <select class="" name="Category" id="Category" v-on:change="onChange">
+            <option v-for="Category in Category_list" v-bind="Category">{{Category}}</option>
+        </select>
+      </label>
+    </div>
+      
+    <div class="href-box">
+      <img src="img/Image3.png">
+      <a href="detail_PC.html">
+        PC Inventory Detail
+      </a>
+    </div>
+    
+  </div>
+  <div class="chart_box" style="margin-top: -20px;">
+       <div class="part1">
+         <p class="part_title">
+           Part I-TOP 5 Inventory by APP
+         </p>
+         <div class="bar_box">
+            <div class="bar_chart" id="bar_chart1"></div>
+            <div class="bar_chart" id="bar_chart2"></div>
+            <div class="bar_chart" id="bar_chart3"></div>
+            <div class="bar_chart" id="bar_chart4"></div>
+         </div>
+       </div>
+       <div class="part2" style="margin-top: 40px;">
+         <p class="part_title">
+           Part II-M18-40 APP TGI
+         </p>
+         <div class="scatter_box">
+            <div class="scatter_chart" id="scatter_chart1"></div>
+            <div class="scatter_chart" id="scatter_chart2"></div>
+            <div class="scatter_chart" id="scatter_chart3"></div>
+            <div class="scatter_chart" id="scatter_chart4"></div>
+         </div>
+       </div>
+  </div>
+  <div class="remark">
+    <p>Remark:TGI(Target Group Index):</p>
+    <img src="img/remark.png" alt="" height="200px">
+  </div>
+  <div class="footer">
+    Report & Data from PGCi 4. of Starcom proprietary system<br>
+Copyright 2017 Starcom. All rights reserved.
+
+  </div>
+  </div>
+
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue-resource.min.js"></script>
+  <script src="js/detail_chart.js"></script>
+  <script src="js/detail_MB.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "dandeng1",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.1",
+    "ejs": "*",
+    "express": "3.2.1",
+    "mysql": "^2.14.1"
+  },
+  "description": "1.��ȷ���������Ѿ���װ��nodejs,����û���뵽http://www.nodejs.org/���ز���װ��\r 2.�ڱ��ش������ݿ�microblog���ű�Ϊ��Ŀ¼��microblog.sql�ļ���\r 3.����Ŀ�󲿷ִ���Ϊ��nodejs����ָ�ϡ�(�ҵ���Դ�п�������)���п�����������Ϊmysql���ݿ����Ӽ��汾�����������޸�Ϊ������д��",
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

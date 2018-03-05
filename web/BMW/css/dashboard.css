@@ -1,0 +1,200 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#header{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+
+}
+
+
+.logo_box {
+    width: 100px;
+    height: auto;
+    min-height: 120px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.logo_BMW{
+    right:170px;
+}
+.logo_PM{
+  left: 20px;
+}
+
+.nav1{
+	position: relative;
+	height: 30px;
+	width: 100%;
+	color: white;
+	background: #262626;
+
+}
+.nav2{
+	position: relative;
+	height: 50px;
+	width: 100%;
+	background: #4d4d4d;
+
+}
+
+
+
+.admin{
+	font-size: 14px;
+	height:30px;
+	line-height: 30px;
+	float: right;
+	margin-right: 30px;
+	color: white;
+}
+.admin a{
+	text-decoration: none;
+	color: white;
+}
+.admin a:hover,.admin a:active{
+	color: red;
+}
+#admin-ul>li a:hover{
+	background: lightgrey;
+}
+
+
+
+.ulbox{
+	width: 1000px;
+	height: 50px;
+	margin-left:150px; 
+	display: block;
+}
+
+.ulbox>ul{
+	height: 50px;
+	width: 100%;
+}
+
+.ulbox>ul>li{
+	height: 50px;
+	width: 180px;
+}
+.ulbox>ul>li>a{
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+
+}
+
+#nav_ul>li>a{
+	text-align: center;
+	color: white
+}
+#nav_ul>li>.actived{
+	background: #262626;
+	color: white
+}
+#nav_ul>li>a:hover,#nav_ul>li>a:active{
+	background: #262626;
+	color: white
+}
+#nav_ul>li>a:link,{
+	background: #262626;
+	color: white
+
+}
+
+/*下拉菜单*/
+#ull1{
+	background: rgba(0,0,0,0.5);
+}
+
+#ull1>li{
+	background: transparent;
+}
+#ull1>li>a{
+	background: transparent;
+	color: white;
+	font-size: 15px;
+}
+#ull1>li>a:hover{
+	background: white;
+	color: #0653B6;
+}
+
+#ull2{
+	background: rgba(0,0,0,0.5);
+	
+}
+
+#ull2>li{
+	background: transparent;
+}
+#ull2>li>a{
+	background: transparent;
+	color: white;
+	font-size: 15px;
+}
+#ull2>li>a:hover{
+	background: white;
+	color: #0653B6;
+}
+
+#ull3{
+	background: rgba(0,0,0,0.5);
+	
+}
+
+#ull3>li{
+	background: transparent;
+}
+#ull3>li>a{
+	background: transparent;
+	color: white;
+	font-size: 15px;
+}
+#ull3>li>a:hover{
+	background: white;
+	color: #0653B6;
+}
+
+#ull4{
+	background: rgba(0,0,0,0.5);
+
+}
+
+#ull4>li{
+	background: transparent;
+}
+#ull4>li>a{
+	background: transparent;
+	color: white;
+	font-size: 15px;
+}
+#ull4>li>a:hover{
+	background: white;
+	color: #0653B6;
+}
+.remark{
+	position: relative;height: 20px;
+	line-height: 20px;
+	text-align: right;
+}
+.remark>p{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: right;
+	color: black;
+	font-size: 14px;
+	padding-right: 10px;
+}

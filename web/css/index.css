@@ -1,0 +1,124 @@
+html{
+    font-family: Arial;
+}
+#custom{
+    position: fixed;
+    top:22%;
+    right: 5px;
+    background:#FFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 0 4px rgba(0,0,0,.14);
+    width:250px;
+    height: 300px;
+    padding: 20px 10px 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+#custom input[type= "text"]{
+    width:80%;
+    padding: 2px;border-radius: 4px;border: 1px solid lightgrey;margin-left: 5px;
+}
+
+/*#custom input:nth-of-type(3){
+    margin-left: 25px;
+}*/
+#custom input:nth-of-type(2n){
+    margin-left: 5px;
+}
+#custom button{
+    width:180px;
+    position: absolute;
+    margin-left: 10px;
+}
+#nav{
+    position: fixed;
+    bottom:8%;
+    right: 30px;
+    background: #FBFBFB;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 0 4px rgba(0,0,0,.14);
+    width:50px;
+    border-radius: 5px;
+    filter:alpha(opacity:70); opacity:0.7;
+}
+
+#nav li{
+    border-bottom: 1px solid #EAEAEA;
+    height: 50px;
+    width:50px;
+}
+#nav li>a{
+    padding: 5px;
+    width:50px;
+    height: 50px;
+    text-align: center;
+    color:#4467a7;
+    font-size: 14px;
+    line-height: 50px;
+}
+nav #platform_list .actived>a{
+    text-decoration: none;
+  font-size:30px;
+  color: #5B5B5B;
+}
+nav #platform_list ul {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+nav #platform_list li {
+    display: inline-block;
+}
+
+nav #platform_list a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+nav #platform_list a:hover {
+    color: #4467a7;
+}
+
+nav #platform_list li a {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+nav #platform_list li a:hover {
+    text-decoration: none;
+    transform: rotate(5deg) scale(1.1);
+}
+
+nav #platform_list li a:hover:before,nav #platform_list li a:hover:after{
+    transition: all 0.3s ease;
+    opacity: 1;
+    width: 20px;
+}
+
+nav #platform_list li a:before,nav #platform_list li a:after {
+    opacity: 0;
+    border-top: 1px solid #4467a7;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: -1;
+    margin: auto;
+    width: 0px;
+}
+
+nav #platform_list li a:before {
+    top: 0px;
+    transform: rotate(120deg) translateY(-50%) translateX(-50%);
+}
+
+nav #platform_list li a:after {
+    top: 5px;
+    transform: rotate(-60deg) translateY(-50%) translateX(-50%);
+}
+
+.tags {
+    padding-left: 30px;
+    padding-bottom: 10px;
+}

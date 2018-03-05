@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    $(function() {
+        // $.ajax({
+        // 	url:'http://10.143.102.243:8080/bmwos/user/login.do?username=admin&password=admin',
+        // 	type:'post',
+        // 	success:function(data){
+        // 		console.log(data)
+        // 	},
+        // 	error:function(err){
+        // 		console.log(err)
+        // 	}
+        // })
+
+        $.ajax({
+            url: 'http://10.143.103.231:8080/SEM/OnloadAsAccount.do',
+            type: 'post',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                StartDate: "2017-12-4",
+                EndDate: "2017-12-6",
+                ContrastStartDate: "2017-12-1",
+                ContrastEndDate: "2017-12-3"
+            }),
+            dataType: "json",
+            success: function(data) {
+                console.log(data)
+            },
+            error: function(err) {
+                console.log(err)
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

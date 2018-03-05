@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Reporting</title>
+    <link rel="shortcut icon" href="images/ico_logo.ico" type="image/x-icon" />
+    <link href="lib/css/bootstrap.mindb.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</head>
+
+<body>  
+    <div class="logo_PM logo_box">
+        <img src="images/PM_Logo.png" alt="" width="100%">
+    </div>
+  <!--   <div class="logo_BMW logo_box">
+        <img src="images/BMW_Logo.png" alt="" width="100%">         
+    </div> -->
+    <div class="nav1" >
+        <div class="row navbox">
+            
+            <div class="admin">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="a">
+					Welcome,
+					<span id="admin"></span>
+				</a>
+            </div>
+        </div>
+    </div>
+    <div class="nav2" style="min-width:1600px;">
+        <div class="ulbox">
+            <ul class="nav navbar-nav" id="nav_ul">
+                <!--  <li class="dropdown" style="width: 50px;">
+                        <a class="a1" href="index.html" style="padding: 0px;color: white">
+                            <i class="fa fa-fw fa-home" style="font-size: 24px">
+                            </i>
+                        </a>
+                    </li> -->
+                <li class="dropdown li" >
+                    <a href="javascript:void(0);"   style="padding: 4px;line-height: 1.3" onclick="setData(9,$(this));">Media Monitor<br>Spending
+                    </a>
+                </li>
+                 <li class="dropdown li" >
+                    <a href="javascript:void(0);"   style="padding: 0px;"  onclick="setData(10,$(this));">BMW BGT_ACT
+                    </a>
+                </li>
+                 <li class="dropdown li" >
+                    <a href="javascript:void(0);"   style="padding: 0px;"  onclick="setData(11,$(this));">Digital Postbuy
+                    </a>
+                </li>
+                 <li class="dropdown li" >
+                    <a href="javascript:void(0);"   style="padding: 0px;"  onclick="setData(12,$(this));">TV GRP_RCH
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="page-wrapper" style="width: 100%;">
+        <iframe id="centerFrame" src="" style="width: 100%; height: 100%;" frameborder="no" border="0"></iframe>
+    </div>
+    <div class="remark">
+        <p>Copyright 2017 PUBLICIS MEDIA. All rights reserved</p>
+    </div>
+</body>
+
+</html>

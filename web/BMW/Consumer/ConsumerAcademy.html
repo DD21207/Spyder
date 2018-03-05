@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>Consumer Academy</title>
+     <link href="img/ico_logo.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="stylesheet" href="css/single.css" >
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slide.css">
+  <!--   <link rel="stylesheet" href="css/mobile.css" media="(max-width: 1366px)"> -->
+	
+</head>
+<body>
+<div id="app">
+    <div id="header">
+    	<div class="logo_box">
+    		<a href="Consumer.html"><img src="../images/PM_Logo.png" alt="" height="85px"></a>
+    	</div>
+    	<div class="navbar">
+    		<ul>
+                <li  class="dropdown">
+                    <a   href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" id="ATTITUDES">ATTITUDES & TRENDS<b class="caret">
+                        </b></a>
+                    <ul class="dropdown-menu" id="ul_ATTITUDES" style="margin-top: -1px;">
+                            <li v-for="list_a in lists.ATTITUDES">
+                                <a href="javascript:void(0);" v-on:click="url(list_a.id)" >
+                                   {{list_a.title}}
+                                </a>
+                            </li>
+                        </ul>
+                </li>
+                <li class="dropdown">
+                    <a   href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" id="BABYCARE">CATEGORY OVERVIEW<b class="caret">
+                        </b></a>
+                    <ul class="dropdown-menu" id="ul_BABYCARE" style="margin-top: -1px;margin-left: 15px;">
+                             <li v-for="list_b in lists.BABYCARE">
+                                <a href="javascript:void(0);" v-on:click="url(list_b.id)" >
+                                   {{list_b.title}}
+                                </a>
+                            </li>
+                        </ul>
+                </li>
+                <li  class="dropdown">
+                    <a   href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" id="FEMCARE">WHAT’S NEW<b class="caret">
+                        </b></a>
+                    <ul class="dropdown-menu" id="ul_FEMCARE" style="margin-top: -1px;margin-left: -35px;">
+                             <li v-for="list_f in lists.FEMCARE">
+                                <a href="javascript:void(0);" v-on:click="url(list_f.id)" >
+                                   {{list_f.title}}
+                                </a>
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+    	</div>
+        <div id="account">
+            <a href="Consumer.html" id="back2" class="dropdown-toggle" style="margin-right: 20px;">
+                <i class="glyphicon glyphicon-home"></i><b style="margin-left: 5px;font-weight:100 ">Home</b>
+            </a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="a">
+                        Hi
+                        <label id="admin">
+                        </label>
+                        <b class="caret">
+                        </b>
+                    </a>
+                    <ul class="dropdown-menu" id="admin-ul" style="margin: -5px;margin-left:-15px;">
+                        <li>
+                            <a href="#" onclick="javascript:alert('This function is being constructed, temporarily not open, please be patient.')">
+                                <i class="fa fa-fw fa-user">
+                                </i>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#myPsw">
+                                <i class="fa fa-fw fa-gear">
+                                </i>
+                                Password
+                            </a>
+                        </li>
+                        <li class="divider">
+                        </li>
+                        <li>
+                            <a id="btnLogout" href="#">
+                                <i class="fa fa-fw fa-power-off">
+                                </i>
+                                Log Out
+                            </a>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+    <div id="container" class="container">
+        <div class="img_box">
+            <div class="img_banner">
+               
+            </div>
+            <div id="title">{{item.title}}</div>
+        </div>
+        <div class="content_box" id="content_box">
+            <div class="left_box">
+                <p class="think" id="think">
+                    WHAT WE THINK
+                </p>
+                <p class="detail">{{item.detail}}</p>
+                <div class="btn_box">
+                    <a :href="'pdf/' + item.More_url" class="btn2" style="background: white"  target="_blank">READ MORE</a>
+                    <a :href="'pdf/' + item.download_url" class="btn1" :download="'pdf/' + item.download_url">DOWNLOAD NOW</a>
+                </div>
+            </div>
+            <div class="right_box">
+                <div class="rslides_container">
+                  <ul class="rslides" id="slider1" >
+                    <li v-for="img in item.slides">
+                        <img v-bind:src="img" alt="">
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+</div>
+    <script src="../lib/js/jquery.min.js"></script>
+    <script src="../lib/js/bootstrap.min.js"></script>
+    <script src="../lib/js/vue.min.js"></script>
+    <script src="../lib/js/vue-resource.min.js"></script>
+    <script src="../lib/js/responsiveslides.min.js"></script>
+    <script src="js/single.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

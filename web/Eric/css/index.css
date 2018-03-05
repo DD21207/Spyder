@@ -1,0 +1,81 @@
+	body,
+	html {
+	    width: 100%;
+	    height: auto;
+	    padding: 0;
+	    margin: 0;
+	    color: black;
+	}
+
+	#app {
+	    width: 100%;
+	    height: 100%;
+	    padding-top: 20px;
+	}
+
+	#model {
+	    background: rgba(0, 0, 0, 0.65);
+	    width: 100%;
+	    height: 100%;
+	    z-index: 10;
+	    position: absolute;
+	    display: none;
+	}
+
+	#tooltip {
+	    width: 200px;
+	    height: 150px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-left: -100px;
+	    margin-top: -75px;
+	    display: none;
+	    background: white;
+	    border: 1px solid lightgrey;
+	    z-index: 100;
+	}
+
+	.close_box {
+	    width: 100%;
+	    height: 30px;
+	    line-height: 30px;
+	    margin: 0;
+	}
+
+	.close_box>p {
+	    float: left;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    margin-left: 20px;
+	}
+
+	.close_box>a {
+	    text-decoration: none;
+	    float: right;
+	    color: grey;
+	    margin-right: 20px;
+	}
+
+	.input_box {
+	    text-align: center;
+	    margin-top: 20px;
+	}
+
+	#container{
+		width: 95%;
+		color: black;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#table_box{
+
+		margin-bottom: 10px;
+	}
+	
+	#table_box p{
+		font-size:20px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}

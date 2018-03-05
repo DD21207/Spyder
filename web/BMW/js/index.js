@@ -1,0 +1,22 @@
+$(function(){
+	$("#box1>a").hover(function(){
+		$("#box1>a>img").attr('src','images/logos/R2.jpg')
+	},function(){
+		$("#box1>a>img").attr('src','images/logos/R1.jpg')
+	})
+	$("#box2>a").hover(function(){
+		$("#box2>a>img").attr('src','images/logos/DB2.jpg')
+	},function(){
+		$("#box2>a>img").attr('src','images/logos/DB1.jpg')
+	})
+	$("#box3>a").hover(function(){
+		$("#box3>a>img").attr('src','images/logos/DT2.jpg')
+	},function(){
+		$("#box3>a>img").attr('src','images/logos/DT1.jpg')
+	})
+	$("#box4>a").hover(function(){
+		$("#box4>a>img").attr('src','images/logos/A2.jpg')
+	},function(){
+		$("#box4>a>img").attr('src','images/logos/A1.jpg')
+	})
+})

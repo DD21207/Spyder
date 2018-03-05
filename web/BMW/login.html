@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<title>
+			Login
+		</title>
+		<link rel="shortcut icon" href="images/ico_logo.ico" type="image/x-icon">
+		<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/login.css">
+		<script src="lib/js/jquery.min.js"></script>
+		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="js/login.js"></script>
+	</head>
+	<body >
+		<div id="bg" >
+			<img src="images/homepage.jpg"  />
+		</div>
+		<div class="logo_PM logo_box">
+			<img src="images/PM_Logo.png" alt="" width="100%">
+		</div>
+	<!-- 	<div class="logo_BMW logo_box">
+			<img src="images/BMW_Logo.png" alt="" width="100%">			
+		</div> -->
+		<div id="container">
+			<div class="title_box">
+				<p>DISCOVER OUTSTANDING</p>
+				<p>OPPORTUNITIES</p>
+
+			</div>
+			<div class="input-box">
+				<form action="">
+					<input type="text" placeholder="Login" name="adminv" id="adminv" onkeydown="if(event.keyCode==13){document.getElementById('btnLogin').click();return false;}"
+					style="background: transparent;">
+					<input type="password" placeholder="Password" name="passv" id="passv" onkeydown="if(event.keyCode==13){document.getElementById('btnLogin').click();return false;}"
+					style="background: transparent;">
+
+					<!-- <button type="button" data-toggle="modal" data-target="#myPsw">Change Password</button> -->
+					
+					<button id="btnLogin" type="button" onclick="login()" >
+						Sign to Win
+					</button>
+				</form>
+			</div>
+		</div>
+		 <div class="remark">
+        <p>Copyright 2017 PUBLICIS MEDIA. All rights reserved</p>
+    </div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="cssload-box-loading" style="margin-top: 45%;">
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+		</div>
+		<!-- /.modal -->
+		<div class="modal fade" id="myPsw" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:90%;margin:20px auto;">
+        <div class="modal-dialog" style="width:50%;height:auto;">
+            <div class="modal-content" style="width:100%;height:auto;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myPswLabel">
+						Change your password |&nbsp;
+						<span id="userid"></span>
+					</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="inputPassword1" class="control-label" style="height:34px;line-height:34px;">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Old:
+                                        <input type="password" class="form-control" id="inputPassword1" placeholder="Old Password" style="width:70%;font-size:8px; display:inline-block; margin-left:10px" onclick="clearTXT('msg')" onfocus="clearTXT('msg')" onblur="checkUserid('adminv',this.value)">
+                                    </label>
+                                    <p id="msg" style="margin-left:76px;margin-bottom:1px;font-size:4px;color:#FF0000"></p>
+                                </div>
+                                <div class="col-sm-12" style="margin-top:15px">
+                                    <label for="inputPassword2" class="control-label" style="height:34px;line-height:34px;">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New:
+                                        <input type="password" class="form-control" id="inputPassword2" placeholder="New Password" style="width:70%;font-size:8px; display:inline-block; margin-left:10px" onclick="clearTXT('msg2')" onfocus="clearTXT('msg2')" onblur="checkEffective('inputPassword2','msg2','inputPassword1')">
+                                    </label>
+                                    <p id="msg2" style="margin-left:76px;margin-bottom:1px;font-size:4px;color:#FF0000"></p>
+                                </div>
+                                <div class="col-sm-12" style="margin-top:15px">
+                                    <label for="inputPassword3" class=" control-label" style="height:34px;line-height:34px;">
+                                        Confirm:
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Confirm New Password" style="width:70%;font-size:8px; display:inline-block; margin-left:10px" onclick="clearTXT('msg3')" onfocus="clearTXT('msg3')" onblur="checkthesame('inputPassword2','inputPassword3','msg3')">
+                                    </label>
+                                    <p id="msg3" style="margin-left:76px;margin-bottom:1px;font-size:4px;color:#FF0000"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="vertical-align:top;font-size:8px;padding-left:0" class="col-md-6">
+                            <ul style="width:95%;list-style:none;padding-left:15px;font-size: 14px;">
+                                <li>
+                                    Passwords must contain characters from the following categories:
+                                </li>
+                                <ul>
+                                    <li>Equal or more than 8 digits.</li>
+                                    <li>Uppercase characters (A - Z)</li>
+                                    <li>Lowercase characters (a - z)</li>
+                                    <li>Numbers (0 - 9)</li>
+                                    <li>Nonalphanumeric characters: ~!@*#$^_%</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="UpdatePassword('adminv','inputPassword2')">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</body>
+
+</html>
